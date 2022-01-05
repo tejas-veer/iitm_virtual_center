@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +8,12 @@
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
 <!-- css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/jcarousel.css" rel="stylesheet" />
-<link href="css/flexslider.css" rel="stylesheet" />
-<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" />
+<link href="{% static 'css/nslkskl.css' %}" rel="stylesheet" />
+<link href="{% static 'css/fancybox/jquery.fancybox.css' %}" rel="stylesheet">
+<link href="{% static 'css/jcarousel.css' %}" rel="stylesheet" />
+<link href="{% static 'css/flexslider.css' %}" rel="stylesheet" />
+<link href="{% static 'js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
  
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -38,9 +39,9 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html">Home</a></li> 
 						<li><a href="about.html">About Us</a></li>
-						<li><a href="courses.html">Courses</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
+						<li><a href="courses.html">Resources</a></li>
+                        {% comment %} <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li> {% endcomment %}
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -54,7 +55,7 @@
         <div id="main-slider" class="flexslider">
             <ul class="slides">
               <li>
-                <img src="img/slides/1.jpg" alt="" />
+                <img src="{% static 'img/slides/1.jpg' %}" alt="" />
                 <div class="flex-caption">
                    <div class="item_introtext"> 
 					<strong>Online Education</strong>
@@ -62,7 +63,7 @@
                 </div>
               </li>
               <li>
-                <img src="img/slides/2.jpg" alt="" />
+                <img src="{% static 'img/slides/2.jpg' %}" alt="" />
                 <div class="flex-caption">
                      <div class="item_introtext"> 
 					<strong>School Education</strong>
@@ -70,7 +71,7 @@
                 </div>
               </li>
               <li>
-                <img src="img/slides/3.jpg" alt="" />
+                <img src="{% static 'img/slides/3.jpg' %}" alt="" />
                 <div class="flex-caption">
                      <div class="item_introtext"> 
 					<strong>Collage Education</strong>
@@ -294,16 +295,16 @@
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/jquery.fancybox-media.js"></script> 
-<script src="js/portfolio/jquery.quicksand.js"></script>
-<script src="js/portfolio/setting.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/animate.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/owl-carousel/owl.carousel.js"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox-media.js' %}"></script> 
+<script src="{% static 'js/portfolio/jquery.quicksand.js' %}"></script>
+<script src="{% static 'js/portfolio/setting.js' %}"></script>
+<script src="{% static 'js/jquery.flexslider.js' %}"></script>
+<script src="{% static 'js/animate.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script>
 </body>
 </html>
