@@ -1,13 +1,15 @@
 {% load static %}
+{% static 'images' as baseURL %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Above Multi-purpose Free Bootstrap Responsive Template</title>
+<title>IITM Virtual Labs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
-<!-- css -->
+	<!-- css -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
 <link href="{% static 'css/nslkskl.css' %}" rel="stylesheet" />
 <link href="{% static 'css/fancybox/jquery.fancybox.css' %}" rel="stylesheet">
 <link href="{% static 'css/jcarousel.css' %}" rel="stylesheet" />
@@ -33,16 +35,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                    <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %} " alt="logo"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li> 
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="courses.html">Resources</a></li>
+                        <li class="active"><a href="{% url 'index' %}">Home</a></li> 
+						<li><a href="{% url 'about' %}">About Us</a></li>
+						<li><a href="{% url 'resources' %}">Resources</a></li>
                         {% comment %} <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="pricing.html">Pricing</a></li> {% endcomment %}
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,30 +56,18 @@
 	<!-- Slider -->
         <div id="main-slider" class="flexslider">
             <ul class="slides">
-              <li>
-                <img src="{% static 'img/slides/1.jpg' %}" alt="" />
+			
+			{% for slide_img in slide_images %}
+			<li>
+				<img src="{{slide_img.slideshow_img.url}}"  alt="" />
                 <div class="flex-caption">
-                   <div class="item_introtext"> 
-					<strong>Online Education</strong>
-					<p>The best educational template</p> </div>
-                </div>
-              </li>
-              <li>
-                <img src="{% static 'img/slides/2.jpg' %}" alt="" />
-                <div class="flex-caption">
-                     <div class="item_introtext"> 
-					<strong>School Education</strong>
-					<p>Get all courses with on-line content</p> </div>
-                </div>
-              </li>
-              <li>
-                <img src="{% static 'img/slides/3.jpg' %}" alt="" />
-                <div class="flex-caption">
-                     <div class="item_introtext"> 
-					<strong>Collage Education</strong>
-					<p>Awesome Template get it know</p> </div>
-                </div>
-              </li>
+					<div class="item_introtext"> 
+						<strong>Online Education</strong>
+						<p>The best educational template</p> </div>
+					</div>
+				</li>
+			{% endfor %}
+             
             </ul>
         </div>
 	<!-- end slider -->

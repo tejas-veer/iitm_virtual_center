@@ -1,12 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Above Multi-purpose Free Bootstrap Responsive Template</title>
+<title>IITM Virtual Labs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
 <!-- css -->
+
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
 <link href="{% static 'css/nslkskl.css' %}" rel="stylesheet" />
 <link href="{% static 'css/fancybox/jquery.fancybox.css' %}" rel="stylesheet">
 <link href="{% static 'css/jcarousel.css' %}" rel="stylesheet" />
@@ -33,16 +36,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                  <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                  <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %} " alt="logo"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li> 
-						<li class="active"><a href="about.html">About Us</a></li>
-						<li><a href="courses.html">Courses</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+						<li ><a href="{% url 'index' %}">Home</a></li> 
+						<li class="active"><a href="{% url 'about' %}">About Us</a></li>
+						<li><a href="{% url 'resources' %}">Resources</a></li>
+                        {% comment %} <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li> {% endcomment %}
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -76,7 +79,7 @@
 							
 						 <div class="row">
 							<div class="col-md-6">
-								<img src="img/section-image-1.png" alt="">
+								<img src="{% static 'img/section-image-1.png' %}" alt="">
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
@@ -224,7 +227,7 @@
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
-										<img class="img-responsive" src="img/team1.jpg" alt="">
+										<img class="img-responsive" src="{% static 'img/team1.jpg' %}" alt="">
 										<!-- Name -->
 										<h4>Johne Doe</h4>
 										<span class="deg">Creative</span> 
@@ -234,7 +237,7 @@
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
-										<img class="img-responsive" src="img/team2.jpg" alt="">
+										<img class="img-responsive" src="{% static 'img/team2.jpg' %}" alt="">
 										<!-- Name -->
 										<h4>Jennifer</h4>
 										<span class="deg">Programmer</span> 
@@ -244,7 +247,7 @@
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
-										<img class="img-responsive" src="img/team3.jpg" alt="">
+										<img class="img-responsive" src="{% static 'img/team3.jpg' %}" alt="">
 										<!-- Name -->
 										<h4>Christean</h4>
 										<span class="deg">CEO</span> 
@@ -254,7 +257,7 @@
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
-										<img class="img-responsive" src="img/team4.jpg" alt="">
+										<img class="img-responsive" src="{% static 'img/team4.jpg' %}" alt="">
 										<!-- Name -->
 										<h4>Kerinele rase</h4>
 										<span class="deg">Manager</span> 
