@@ -3,7 +3,7 @@ from .models import Slideshow, Teams
 
 # Create your views here.
 def index(request):
-    slide_images = slideshow.objects.all()
+    slide_images = Slideshow.objects.all()
     return render(request,'index.html',{"slide_images":slide_images})
 
 def about(request):
