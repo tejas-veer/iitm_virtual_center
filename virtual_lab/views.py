@@ -8,12 +8,12 @@ def index(request):
 
 def about(request):
     slides_img = slideshow.objects.all()
-    return render(request,'about.html',{"slide_images":slides_img})
+    return render(request,'about.html',)
 
 def resources(request):
     slides_img = slideshow.objects.all()
-    return render(request,'courses.html',{"slide_images":slides_img})
+    return render(request,'courses.html')
 
 def contact(request):
     slides_img = slideshow.objects.all()
-    return render(request,'contact.html',{"slide_images":slides_img})
+    return render(request,'contact.html')
