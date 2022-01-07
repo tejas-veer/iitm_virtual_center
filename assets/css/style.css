@@ -80,7 +80,7 @@ header .navbar {
     font-weight: 700;
     line-height: 1em;
 	letter-spacing: -1px;
-    margin-top: 0px;
+    /* margin-top: 0px; */
     padding: 0 0 0 15px;
 }
 .navbar-default .navbar-brand{
@@ -1553,7 +1553,7 @@ article img.pull-right, article .align-right{
     padding-left: 0;
   }
 	.navbar-brand {
-		margin-top: 0px;
+		/* margin-top: 0px; */
 		border-bottom: none;
 	}
 	.navbar-header {

@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from virtual_lab.models import slideshow
+from virtual_lab.models import Slideshow, Teams
 
 # Register your models here.
-admin.site.register(slideshow)
+admin.site.register(Slideshow)
+admin.site.register(Teams)
