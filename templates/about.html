@@ -24,6 +24,9 @@
 	.navbar-brand{
 		margin-top: 0px;
 	}
+	.team-member{
+		display:block;
+	}
 </style>
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -50,7 +53,7 @@
                     <ul class="nav navbar-nav">
 						<li ><a href="{% url 'index' %}">Home</a></li> 
 						<li class="active"><a href="{% url 'about' %}">About Us</a></li>
-						<li><a href="{% url 'resources' %}">Resources</a></li>
+						<li><a href="https://virtual-center.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener noreferrer">Resources</a></li>
                         {% comment %} <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="pricing.html">Pricing</a></li> {% endcomment %}
                         <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -79,15 +82,15 @@
 									<h3>Virtual Center <span class="color"></span></h3>
 									<p>A Virtual Centre on Artificial Intelligence (AI)/ Machine Learning (ML)/ Deep Learning (DL) is established in IITM Pune in order to expand the domain through multidisciplinary programs in the field of Earth System Science.
  
-										This virtual Center will coordinate with the units of MoES to identify problems that can be addressed with AI/ML tools and will also plan and advise strategy to develop AI/ML based application tools.
+									</p>	<p>This virtual Center will coordinate with the units of MoES to identify problems that can be addressed with AI/ML tools and will also plan and advise strategy to develop AI/ML based application tools.
 										 
-										This center will also be responsible for conducting seminars, workshops and other capacity building activities in the related areas.</p>
-								</div>
-								<a href="#" class="btn btn-color">Read more</a>  
+									</p>	<p>This center will also be responsible for conducting seminars, workshops and other capacity building activities in the related areas.</p>
+								</p></div>
+								{% comment %} <a href="#" class="btn btn-color">Read more</a>   {% endcomment %}
 							</div>
 						</div>  
 
-						<br>
+						{% comment %} <br> {% endcomment %}
 							
 						 {% comment %} <div class="row">
 							<div class="col-md-6">
@@ -240,7 +243,7 @@
 									<!-- Team Member -->
 									<div class="team-member">
 										<!-- Image -->
-										<img class="img-responsive" src="{{member.img.url}}" alt="">
+										<img class="img-responsive"  src="{{member.img.url}}" alt="">
 										<!-- Name -->
 										<h4>{{member.name}}</h4>
 										<span class="deg">{{member.designation}}</span> 

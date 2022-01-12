@@ -315,7 +315,7 @@ display: inline-block;
 	background:#000;
 	position:relative;
 	margin:0;
-	padding:0;
+	padding:20rem;
 }
 
 /*  Sliders
@@ -427,6 +427,7 @@ bottom: -30px;
     text-align: center;
     background-color: #F9F9F9;
     padding-bottom: 15px;
+	
 }
 .fancybox-title-inside-wrap {
     padding: 3px 30px 6px;

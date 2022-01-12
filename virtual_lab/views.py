@@ -11,7 +11,7 @@ def about(request):
     return render(request,'about.html',{"members": members})
 
 def resources(request):
-    return render(request,'courses.html')
+    return render(request,'docindex.html')
 
 def contact(request):
     return render(request,'contact.html')
