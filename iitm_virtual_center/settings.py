@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'iitm_virtual_center.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'virtual_centre',
+        'NAME': 'virtual_center',
     }
 }
 
